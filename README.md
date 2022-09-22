@@ -11,9 +11,7 @@
 
 ### Problem Statement 
 
-Regardless of whether one chooses to buy or sell a home, knowing how much that home is worth is essential before making such a significant financial choice. That is the concern that Ames, Iowa homebuyers and sellers have. If we have familiar with the features of a home in Ames, how can we estimate its price?
-
-To answer that question, the price of a house at the sale will be predicted using a linear regression model built using the Ames Housing Dataset.
+Regardless of whether one chooses to buy or sell a home, knowing how much that home is worth is essential before making such a significant financial choice. That is the concern that Ames, Iowa homebuyers and sellers have. If we have familiar with the features of a home in Ames, how can we estimate its price? To answer that question, the price of a house at the sale will be predicted using a linear regression model built using the Ames Housing Dataset.
 
 
 ### Repository Structure 
