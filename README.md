@@ -15,9 +15,9 @@ Regardless of whether one chooses to buy or sell a home, knowing how much that h
 
 To answer that question, the price of a house at the sale will be predicted using a linear regression model built using the Ames Housing Dataset.
 
-<br>
 
 ### Repository Structure 
+
 ```
 dsi_project_ames
 |
