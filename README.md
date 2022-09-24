@@ -1,3 +1,4 @@
+[README.md](https://github.com/scenttz/Project-2-Linear-Regression-on-Ames-Housing-Dataset-to-Predict-Sale-Price/files/9639045/README.md)
 <img src="http://imgur.com/1ZcRyrc.png" style="float: left; margin: 20px; height: 55px">
 
 # DSI - Project 2 : Linear Regression Model on Ames Housing Dataset to Predict Sale Prices
