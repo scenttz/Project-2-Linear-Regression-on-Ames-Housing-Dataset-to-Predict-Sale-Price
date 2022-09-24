@@ -1,4 +1,3 @@
-[README.md](https://github.com/scenttz/Project-2-Linear-Regression-on-Ames-Housing-Dataset-to-Predict-Sale-Price/files/9639045/README.md)
 <img src="http://imgur.com/1ZcRyrc.png" style="float: left; margin: 20px; height: 55px">
 
 # DSI - Project 2 : Linear Regression Model on Ames Housing Dataset to Predict Sale Prices
@@ -12,11 +11,13 @@
 
 ### Problem Statement 
 
-Regardless of whether one chooses to buy or sell a home, knowing how much that home is worth is essential before making such a significant financial choice. That is the concern that Ames, Iowa homebuyers and sellers have. If we have familiar with the features of a home in Ames, how can we estimate its price? To answer that question, the price of a house at the sale will be predicted using a linear regression model built using the Ames Housing Dataset.
+Regardless of whether one chooses to buy or sell a home, knowing how much that home is worth is essential before making such a significant financial choice. That is the concern of homebuyers and sellers have in Ames, Iowa . If we have familiar with the features of a home in Ames, how can we estimate its price?
 
+To answer that question, the price of a house at the sale will be predicted using a linear regression model built using the Ames Housing Dataset.
+
+<br>
 
 ### Repository Structure 
-
 ```
 dsi_project_ames
 |
@@ -75,23 +76,16 @@ dsi_project_ames
 
 ### Scenario Analysis
 
-The first **01_data_cleaning.ipynb** notebook begins by importing and cleaning a training data set 2197 homes with 82 different features. Once cleaned, we examine many more columns that have missing values. 
- 
-Explore the datasets to understand what each columns mean as many terms are american housing related terms. This process involves researching and understanding what feature of american house contributes to the price and other technical terms e.g. sale type and sale condition.
+The first `01_data_cleaning.ipynb` notebook begins by importing and cleaning a training data set 2197 homes with 82 different features. Once cleaned, we examine columns that have high missing values which need to be explored in the datasets. All details about different features can be found in `data_dictionary.md`. To impute missing values, they can be categorized into 3 types such as columns with over 80% missing values, columns that missing values defined as None, 0 or No from data dictionary and statistics imputed missing values. 
+<br>
 
-Once I have a clear understanding of the dataset, I begin to explore the dataset with EDA in order to understand the dataset further and ultimately deal with missing values. Missing values from this dataset was dealt with in 4 ways (dropping, impute mode, impute 0, and impute 'None')
+After that `02_data_preprocessing.ipynb`
+notebook is used for preprocessing, feature engineering, and outlier cleaning. The related columns are grouped together, then features that have the highest correlation with sale price are selected both numerical and categorical columns. For feature engineering, the correlation of features with sale price and log sale price are compared. The result shows that log sale price is more related to those features. In order to maximize the efficiency of linear regression, we need to manage outliers by selecting the unreasonable data comparing to sale price. For the columns with categorical data are converted into binary values which allows linear regression to work.
+<br>
 
-Once there are no missing values, the relationship between columns was then investigated in order to combine and drop redundant columns. Leaving columns that are highly related (i.e. dependent columns) will confuse the model which usually results in suboptimal coefficients and model performance.
+Next step is to create benchmarking model by selecting the features that have high correlation with sale price using `03_model_benchmarking.ipynb`. The obtained benchmarking model is used as an initiative data for improving further model. The model `04_model_comparison.ipynb` is continuously adjusted until it becomes overfit regarding the result in `05_kaggle_competition.ipynb`. The most suitable model `06_production_model_evaluation.ipynb` is selected and used to predict sale price of house in Ames, Iowa.
 
-Cleaning of categorical columns involves exploring the mean of each groupby of column results, and combining the values of columns with uneven categorical value. This method allows us to simplify our categorical column and model to create flexibility and ability to take in new information.
-
-Feature engineering was then carried out as our feature correlates better with natural log of sale price. Comparison of models during model iteration will support this decision.
-
-With the data ready, I proceeded with creating a benchmarking model with top 5 numerical features ranks by correlation with target variable y (sale price). This benchmarking model serves as a baseline to assess our iterations performance.
-
-Iterating through the model options systematically, from numerical to category, gives us the finalize production model consisting of 25 numerical features and 6 categorical feautres. This model is selected because it's simple and clean, allowing the model to become more robust and is less likely to overfit in the future.
-
-
+ <br>
 
 ### Conclusions and Recommendations
 The model selected for production consists of:
